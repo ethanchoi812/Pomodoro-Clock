@@ -1,20 +1,45 @@
-var setTime = document.getElementById("setPomo").innerHTML;
-var t = setTime*60;
+	var pomo = document.getElementById("setPomo");
+	var pomoTime = pomo.innerHTML;
 
-var countDown = setInterval(function(){
+	var breko = document.getElementById("setBreak");
+	var breakTime = breko.innerHTML;
 
-	if(t<1){
-		clearInterval(countDown);
-		document.getElementById("displayTimer").innerHTML = "TIME'S UP"
-	}else{
+	var display = document.getElementById("displayTimer");
+
+var initializeClock = function(endtime){
+
+	var t = endtime*60;
+	var countDown = setInterval(function(){
+
 		t--;
 		var minutes = Math.floor(t/60);
 		var seconds = Math.floor(t%60);
 
-	if(seconds<10){
-		document.getElementById("displayTimer").innerHTML = minutes + ":" + "0" + seconds;
-	} else {
-		document.getElementById("displayTimer").innerHTML = minutes + ":" + seconds;
-		}
+		if(seconds<10){
+			display.innerHTML = minutes + ":" + "0" + seconds;
+		} else {
+			display.innerHTML = minutes + ":" + seconds;
+			}
+
+		if(t<1){
+			clearInterval(countDown);
+			display.innerHTML = "TIME'S UP";
+			}
+
+	}, 1000);
+}
+
+function init(){
+	pomo.onclick = function(){
+		display.innerHTML = "";
+		initializeClock(pomoTime);
 	}
-}, 1000);
+
+	breko.onclick = function(){
+		display.innerHTML = "";
+		initializeClock(breakTime);
+	}
+	return false;
+}
+
+window.onload = init;
