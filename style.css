@@ -1,0 +1,84 @@
+body{
+	background-color: #fff;
+	font-family: 'Lato', 'Arial', sans-serif;
+	color: #383838;
+}
+
+h2{
+	font-family: 'Crete Round', 'Times', serif;
+	color: #e81d62;
+
+}
+
+.app{
+	width: 320px;
+	height: 600px;
+	margin:0 auto;
+	margin-top: 45px;
+	text-align: center;
+}
+
+.pomodoro{
+	display: inline-block;
+	margin-left: 15px;
+	float: left;
+}
+
+.breaktime{
+	display: inline-block;
+	margin-right: 15px;
+	float: right;
+}
+
+.controls-div{
+	margin-top: -20px;
+	border-radius: 2px;
+	padding: 5px 0;
+}
+
+.controls{
+	margin-top: 0px;
+	display: inline;
+	font-size: 18px;
+}
+
+.clear{
+	clear:both;
+}
+
+.display{
+	border:1px solid #ccc;
+	width: 160px;
+	height: 160px;
+	margin: 0 auto;
+	margin-top: 55px;
+	border-radius: 50%;
+	color: #383838;
+}
+
+#displayTime{
+	font-size: 28px;
+	font-weight: 700;
+	margin-top: 60px;
+	text-align: center;
+}
+
+#minusPomo {
+	margin-right:20px;
+}
+
+#plusPomo{
+	margin-left: 20px;
+}
+
+#minusBreak {
+	margin-right:10px;
+}
+
+#plusBreak{
+	margin-left: 10px;
+}
+
+#gong{
+	display: none;
+}

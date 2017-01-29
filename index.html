@@ -2,22 +2,37 @@
 <html>
 <head>
 	<title>Pomodoro Clock</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Crete+Round|Lato" rel="stylesheet">
 </head>
 <body>
-	<div class="container controls">
+	<div class="app">
 		<div class="pomodoro">
 			<h2>Pomodoro</h2>
-			<span>&minus;</span><span id="setPomo">1</span><span>&plus;</span>
+			<div class="controls-div">
+				<div class="controls minus" id="minusPomo">&minus;</div>
+				<div class="controls" id="setPomo"></div>
+				<div class="controls plus" id="plusPomo">&plus;</div>
+			</div>
 		</div>
+		
 		<div class="breaktime">
 			<h2>Break</h2>
-			<span>&minus;</span><span id="setBreak">5</span><span>&plus;</span>
+			<div class="controls-div">
+				<div class="controls minus" id="minusBreak">&minus;</div>
+				<div class="controls" id="setBreak"></div>
+				<div class="controls plus" id="plusBreak">&plus;</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<div class="container display">
+			<div id="displayTime"></div>
 		</div>
 	</div>
-
-	<div class="container display">
-		<div id="displayTimer"></div>
-	</div>
+	<audio controls id="gong">
+  		<source src="gong.wav" type="audio/wav">
+	</audio>
 <script src="app.js"></script>
 </body>
 </html>
