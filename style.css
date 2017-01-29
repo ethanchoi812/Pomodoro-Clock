@@ -1,0 +1,22 @@
+body{
+	font-family: 'Arial', sans-serif;
+}
+
+.container{
+	text-align: center;
+	margin: 0 auto;
+}
+
+#displayTime{
+	margin-top: 25px;
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.minus {
+	margin-right:20px;
+}
+
+.plus{
+	margin-left: 20px;
+}

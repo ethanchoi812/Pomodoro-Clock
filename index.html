@@ -2,21 +2,22 @@
 <html>
 <head>
 	<title>Pomodoro Clock</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="container controls">
+	<div class="container">
 		<div class="pomodoro">
 			<h2>Pomodoro</h2>
-			<span>&minus;</span><span id="setPomo">25</span><span>&plus;</span>
+			<span class="minus" id="minusPomo">&minus;</span><span id="setPomo"></span><span class="plus" id="plusPomo">&plus;</span>
 		</div>
 		<div class="breaktime">
 			<h2>Break</h2>
-			<span>&minus;</span><span id="setBreak">5</span><span>&plus;</span>
+			<span class="minus" id="minusBreak">&minus;</span><span id="setBreak"></span><span class="plus" id="plusBreak">&plus;</span>
 		</div>
 	</div>
 
 	<div class="container display">
-		<div id="displayTimer"></div>
+		<div id="displayTime"></div>
 	</div>
 <script src="app.js"></script>
 </body>
