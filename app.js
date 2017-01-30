@@ -43,21 +43,20 @@
 
 var initializeClock = function(endtime){
 
-	var t = endtime*60 + 1; 
+	var t = endtime*60; 
 	
 	function updateClock(){
 		t-= 1;
 		var minutes = Math.floor(t/60);
 		var seconds = Math.floor(t%60);
 
-		if(minutes<10){
-			displayTime.innerHTML = "0" + minutes + ":" + seconds;
-		} 
-
+		
 		if(seconds<10){
-			displayTime.innerHTML = minutes + ":" + "0" + seconds;
+			displayTime.innerHTML = "<div class='display'>" + minutes + ":" + "0" + seconds + "</div>";
+			document.title = minutes + ":" + "0" + seconds;
 		} else {
-			displayTime.innerHTML = minutes + ":" + seconds;
+			displayTime.innerHTML = "<div class='display'>" + minutes + ":" + seconds + "</div>";
+			document.title = minutes + ":" + seconds;
 			}
 
 		if(t<1){
@@ -73,18 +72,18 @@ var initializeClock = function(endtime){
 
 
 //change between pomodoro and break
-var displayholder;
+var displayholder = 25 + 1/60;
 
 function init(){
 	pomo.onclick = function(){
 		displayholder = pomo.innerHTML;
-		displayTime.innerHTML = displayholder + ":00";
+		displayTime.innerHTML = "<div class='display'>" + displayholder + ":00</div>";
 		clearInterval(countDown);
 	}
 
 	breko.onclick = function(){
 		displayholder = breko.innerHTML;
-		displayTime.innerHTML = displayholder + ":00";
+		displayTime.innerHTML = "<div class='display'>" + displayholder + ":00</div>";
 		clearInterval(countDown);
 	}
 
