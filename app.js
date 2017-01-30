@@ -50,13 +50,13 @@ var initializeClock = function(endtime){
 		var minutes = Math.floor(t/60);
 		var seconds = Math.floor(t%60);
 
-		
 		if(seconds<10){
 			displayTime.innerHTML = "<div class='display'>" + minutes + ":" + "0" + seconds + "</div>";
 			document.title = minutes + ":" + "0" + seconds;
 		} else {
 			displayTime.innerHTML = "<div class='display'>" + minutes + ":" + seconds + "</div>";
 			document.title = minutes + ":" + seconds;
+
 			}
 
 		if(t<1){
