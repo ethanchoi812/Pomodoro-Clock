@@ -62,7 +62,7 @@ var initializeClock = function(endtime){
 		if(t<1){
 			clearInterval(countDown);
 			document.getElementById("gong").play();
-			displayTime.innerHTML = "TIME'S UP";
+			displayTime.innerHTML = "<div class='display'>TIME'S UP</div>";
 			}
 	}
 
